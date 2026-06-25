@@ -48,3 +48,6 @@
 /* Factory test keys */
 #define FN_KEY_1 MO(1)
 #define FN_KEY_2 MO(3)
+
+/* --- 将动态键映射层数设置为 8 --- */
+#define DYNAMIC_KEYMAP_LAYER_COUNT 8

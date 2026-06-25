@@ -1,3 +1,5 @@
+[README_CUSTOM_Q10_MOD.md](./README_CUSTOM_Q10_MOD.md)
+
 # vial-qmk (Keychron Edition)
 
 Fork of [vial-kb/vial-qmk](https://github.com/vial-kb/vial-qmk) merged with [Keychron's QMK firmware](https://github.com/keychron/qmk_firmware) to bring full Vial support to Keychron keyboards.

@@ -70,3 +70,15 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
     [WIN_FN]   = { ENCODER_CCW_CW(UG_VALD, UG_VALU) }
 };
 #endif // ENCODER_MAP_ENABLE
+
+bool rgb_matrix_indicators_user(void) {
+    if (IS_LAYER_ON(4)) {
+        uint8_t led_index = g_led_config.matrix_co[1][0];
+
+        if (led_index != NO_LED) {
+            // R=150, G=210, B=255：这种比例在键盘灯珠上会呈现出非常通透的冷白偏蓝色
+            rgb_matrix_set_color(led_index, 150, 210, 255);
+        }
+    }
+    return false;
+}
