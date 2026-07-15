@@ -80,5 +80,15 @@ bool rgb_matrix_indicators_user(void) {
             rgb_matrix_set_color(led_index, 150, 210, 255);
         }
     }
+    // 新增：Caps Lock 大写锁定指示灯逻辑
+    if (host_keyboard_led_state().caps_lock) {
+        // 根据 keymap，KC_CAPS 位于第 4 行（索引3），第 2 列（索引1）
+        uint8_t caps_led_index = g_led_config.matrix_co[3][1];
+
+        if (caps_led_index != NO_LED) {
+            // R=150, G=210, B=255：这种比例在键盘灯珠上会呈现出非常通透的冷白偏蓝色
+            rgb_matrix_set_color(caps_led_index, 150, 210, 255);
+        }
+    }
     return false;
 }
